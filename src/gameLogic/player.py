@@ -18,10 +18,10 @@ class Player:
     
     def choose_card(self):
         print("Select a card to play: ", end='')
-        chosen_card = input()
-        print(self.hand[int(chosen_card)])
+        chosen_card_input = input()
+        chosen_card_output = self.play_card(self.hand[int(chosen_card_input)])
         print("\n")
-
+        return chosen_card_output
 
     def check_marriages(self):
         marriages = []

@@ -13,11 +13,11 @@ class Game:
     def start(self):
         self.player.hand = self.deck.deal(6)
         self.ai.hand = self.deck.deal(6)
-        self.player.show_hand()
-        self.player.choose_card()
+        
 
         for _ in range(6):
-            lead_card = self.player.play_card(self.player.hand[0])  # Simplified for example
+            self.player.show_hand()
+            lead_card = self.player.choose_card()  # Simplified for example
             ai_card = self.ai.play_card(self.ai.hand[0])  # Simplified for example
             print(f"Player plays: {lead_card}, AI plays: {ai_card}")
             winner = play_trick(lead_card, ai_card, self.trump_card.suit)
