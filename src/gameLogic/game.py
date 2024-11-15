@@ -21,7 +21,12 @@ class Game:
             ai_card = self.ai.play_card(self.ai.hand[0])  # Simplified for example
             print(f"Player plays: {lead_card}, AI plays: {ai_card}")
             winner = play_trick(lead_card, ai_card, self.trump_card.suit)
+            if winner == lead_card:
+                self.player.score += winner.value
+            elif winner == ai_card:
+                self.ai.score += winner.value
             print(f"{winner} wins the trick!")
+            print(f"Player: {self.player.score} | AI: {self.ai.score}")
 
         # Check for marriages and calculate score
         player_marriages = self.player.check_marriages()
