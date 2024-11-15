@@ -7,6 +7,18 @@ class Player:
         self.hand.remove(card)
         return card
     
+    def show_hand(self):
+        print("\n")
+        print("Your Hand: ")
+        tracker = 0
+        for card in self.hand:
+            print(f"{tracker}: {card}")
+            tracker += 1
+        print("\n")
+    
+    # def choose_card(self):
+    #     print("\n")
+
     def check_marriages(self):
         marriages = []
         suits = {}
