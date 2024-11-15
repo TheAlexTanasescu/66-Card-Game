@@ -14,6 +14,7 @@ class Game:
         self.player.hand = self.deck.deal(6)
         self.ai.hand = self.deck.deal(6)
         self.player.show_hand()
+        self.player.choose_card()
 
         for _ in range(6):
             lead_card = self.player.play_card(self.player.hand[0])  # Simplified for example

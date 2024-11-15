@@ -16,8 +16,12 @@ class Player:
             tracker += 1
         print("\n")
     
-    # def choose_card(self):
-    #     print("\n")
+    def choose_card(self):
+        print("Select a card to play: ", end='')
+        chosen_card = input()
+        print(self.hand[int(chosen_card)])
+        print("\n")
+
 
     def check_marriages(self):
         marriages = []
